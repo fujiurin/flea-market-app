@@ -1,1 +1,28 @@
 # laravel-docker-template
+# 環境構築
+## Dockerビルド
+・git clone git@github.com:Estra-Coachtech/laravel-docker-template.git　　
+・mv laravel-docker-template flea-market-app　　
+・cd flea-market-app　　
+・git remote set-url origin git@github.com:fujiurin/flea-market-app.git　　
+・git remote -v　　
+・git add .　　
+・git commit -m "リモートリポジトリの変更"　　
+・git push origin main　　
+・docker-compose up -d --build　　
+
+## Laravel環境構築
+・docker-compose exec php bash　　
+・composer install　　
+・cp .env.example .env　　
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=mysql
+DB_PORT=3306
+DB_DATABASE=laravel_db
+DB_USERNAME=laravel_user
+DB_PASSWORD=laravel_pass
+```
+## アプリケーションキーの作成
+・php artisan key:generate
