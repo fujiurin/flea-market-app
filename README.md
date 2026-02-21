@@ -15,7 +15,7 @@
 ・docker-compose exec php bash  
 ・composer install  
 ・cp .env.example .env  
-
+・.envを以下に変更
 ```env
 DB_CONNECTION=mysql
 DB_HOST=mysql
