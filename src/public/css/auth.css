@@ -1,0 +1,107 @@
+main {
+    max-width: 500px;
+    width: 90%;
+    margin: 60px auto 0;
+}
+
+/* app.blade.php（ヘッダー） */
+.header {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    background-color: #000000;
+}
+
+.header-logo {
+    height: 40px;
+    width: auto;
+    margin-left: 15px;
+    display: block;
+}
+
+/* login / register */
+.page-title {
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 40px;
+}
+
+.content {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    padding-bottom: 4px;
+}
+
+.form-group input,
+.btn {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 6px 10px;
+}
+
+.btn {
+    background-color: #ff5555;
+    border-radius: 4px;
+    border: none;
+    color: #ffffff;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.link {
+    color: #0073cc;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+/* verify-email */
+.verification {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin: 160px 0;
+}
+
+.message {
+    text-align: center;
+    font-weight: bold;
+}
+
+.verify-link {
+    display: block;
+    width: 200px;
+    padding: 14px;
+    background-color: #d9d9d9;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid #000;
+    font-weight: bold;
+}
+
+.resend-btn {
+    background: none;
+    border: none;
+    color: #0073cc;
+    display: block;
+}
+
+.error {
+    color: #ff5555;
+    font-size: 14px;
+    margin: 10px 0;
+}
