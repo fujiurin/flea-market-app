@@ -33,3 +33,8 @@ DB_PASSWORD=laravel_pass
 ### シーディングの実行
 ・php artisan db:seed
 
+## 使用技術
+・PHP 8.4.13
+・MySQL 8.0.26
+・Laravel 8.75
+
