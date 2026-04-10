@@ -37,4 +37,21 @@ DB_PASSWORD=laravel_pass
 ・PHP 8.4.13
 ・MySQL 8.0.26
 ・Laravel 8.75
+・Mailhog（メール確認）
+・Stripe（決済機能）
+
+## ER図
+![ER図](docs/flea-market-app-ER.drawio.png)
+
+## URL
+・開発環境：http://localhost/
+・phpMyAdmin：http://localhost:8080/
+・mailhog：http://localhost:8025/
+
+## 決済機能
+・Stripe
+※ テスト用カード情報
+- カード番号：4242 4242 4242 4242
+- 有効期限：任意の未来日
+- CVC：任意の3桁
 
