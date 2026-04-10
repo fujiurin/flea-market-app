@@ -34,35 +34,35 @@ DB_PASSWORD=laravel_pass
 ・php artisan db:seed
 
 ## 使用技術
-・PHP 8.4.13
-・MySQL 8.0.26
-・Laravel 8.75
-・Mailhog（メール確認）
-・Stripe（決済機能）
+・PHP 8.4.13  
+・MySQL 8.0.26  
+・Laravel 8.75  
+・Mailhog（メール確認）  
+・Stripe（決済機能）  
 
 ## ER図
 ![ER図](docs/flea-market-app-ER.drawio.png)
 
 ## URL
-・開発環境：http://localhost/
-・phpMyAdmin：http://localhost:8080/
-・mailhog：http://localhost:8025/
+・開発環境：http://localhost/  
+・phpMyAdmin：http://localhost:8080/  
+・mailhog：http://localhost:8025/  
 
 ## 決済機能
-・Stripe
-メールアドレスは「〇〇@〇〇.com」の形式で入力してください
-「@」のみや不完全な形式（例：〇〇@〇〇）では決済処理は実行できません
-※ テスト用カード情報
-- カード番号：4242 4242 4242 4242
-- 有効期限：任意の未来日
-- CVC：任意の3桁
+・Stripe  
+メールアドレスは「〇〇@〇〇.com」の形式で入力してください  
+「@」のみや不完全な形式（例：〇〇@〇〇）では決済処理は実行できません  
+※ テスト用カード情報  
+- カード番号：4242 4242 4242 4242  
+- 有効期限：任意の未来日  
+- CVC：任意の3桁  
 
 ## 単体テスト
-・mysql -u root -p
-・> CREATE DATABASE demo_test;
-・> SHOW DATABASES;
-・database.phpを以下に変更
-```database.php
+・mysql -u root -p  
+・> CREATE DATABASE demo_test;  
+・> SHOW DATABASES;  
+・database.phpを以下に変更  
+```database.php  
 'mysql_test' => [
              'driver' => 'mysql',
              'url' => env('DATABASE_URL'),
@@ -103,22 +103,22 @@ DB_PASSWORD=laravel_pass
 + DB_USERNAME=root
 + DB_PASSWORD=root
 ```
-・テスト用のアプリケーションキー作成 php artisan key:generate --env=testing
-・php artisan config:clear
-・php artisan migrate --env=testing
-・phpunitの編集
-```phpunit.xml
+・テスト用のアプリケーションキー作成 php artisan key:generate --env=testing  
+・php artisan config:clear  
+・php artisan migrate --env=testing  
+・phpunitの編集  
+```phpunit.xml 
 -         <!-- <server name="DB_CONNECTION" value="sqlite"/> -->
 -         <!-- <server name="DB_DATABASE" value=":memory:"/> -->
 +         <server name="DB_CONNECTION" value="mysql_test"/>
 +         <server name="DB_DATABASE" value="demo_test"/>
 ```
-・テストファイルの作成
-EmailVerificationTest.php
-ItemTest.php
-LoginTest.php
-PurchaseTest.php
-RegisterTest.php
-UserTest.php
+・テストファイルの作成  
+EmailVerificationTest.php  
+ItemTest.php  
+LoginTest.php  
+PurchaseTest.php  
+RegisterTest.php  
+UserTest.php  
 ・テスト実行　php artisan test
 
